@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="phonegap-plugin-developer-mode"
+      version="0.1.0">
+    <name>developer-mode</name>
+    <description>PhoneGap Developer Mode Plugin</description>
+    <license></license>
+    <keywords>phonegap,developer</keywords>
+    <repo>https://github.com/phonegap/phonegap-plugin-developer-mode</repo>
+    <issue>https://github.com/phonegap/phonegap-plugin-developer-mode/issues</issue>
+
+    <js-module src="www/developer-mode.js" name="DeveloperMode">
+        <clobbers target="window.DeveloperMode" />
+    </js-module>
+
+    <dependency id="phonegap-plugin-contentsync" url="https://github.com/phonegap/phonegap-plugin-contentsync" version="1.2.4" />
+    <dependency id="phonegap-plugin-push" version="1.6.3" />
+</plugin>

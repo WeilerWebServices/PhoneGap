@@ -1,0 +1,123 @@
+#download {
+    background:#45b8da;
+    padding:80px 0 80px 0;
+    position: relative;
+}
+
+#download:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    width: 0;
+
+    border: 30px solid transparent;
+    border-top-color: #45b8da;
+
+    top: 100%;
+    left: 50%;
+
+    margin-left: -25px;
+    z-index: 2;
+}
+
+/**** Setting container padding to resize with viewport ****/
+
+ 
+@media screen and (max-width: 48em) {
+#download {
+        padding: 60px 0 30px 0;
+    }
+}
+
+/* Padding resetting for container done */
+
+#download h2 {
+    font-size:1.9rem;
+    padding-left: 30px;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 0px #0D7796;
+}
+
+/**** Setting h2 font to resize with viewport ****/
+
+@media screen and (max-width: 62em) {
+    #download h2 {
+        font-size:1.7rem;
+        margin: 0;
+    }
+}
+ 
+@media screen and (max-width: 57em) {
+    #download h2 {
+        font-size:1.55rem;
+    }
+}
+ 
+ 
+@media screen and (max-width: 48em) {
+    #download h2 {
+        font-size:1.5rem;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+/* Font resetting for h2 done */
+
+
+#download p {
+    padding:0 0 0 30px;
+    vertical-align: text-top;
+}
+
+/**** Setting p font to resize with viewport ****/
+
+@media screen and (max-width: 62em) {
+    #download p {
+        font-size: 1.0rem;
+    }
+}
+ 
+@media screen and (max-width: 48em) {
+    #download p {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Font resetting for p done */
+
+#download img {
+  max-height: 165px;
+  vertical-align: center;
+  margin-top: 10px;
+}
+
+/**** Setting download image to scale with small ****/
+
+@media screen and (max-width: 48em) {
+    #download img {
+        padding: 0 0 30px 0;
+    }
+}
+
+/* Image reset done */
+
+#apple {
+    background-image: url('../assets/images/apple.svg');
+    background-repeat: no-repeat;
+    background-position: 5% 42%;
+}
+
+#windows  {
+    background-image: url('../assets/images/windows.svg');
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
+
+#google  {
+    background-image: url('../assets/images/google.svg');
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}

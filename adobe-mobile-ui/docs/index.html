@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><title>Button Mobile</title><link rel="stylesheet" type="text/css" href="css/root-mobile.css"><link rel="stylesheet" type="text/css" href="css/button-mobile.css"></head><body><head><h1>Button Mobile</h1><nav><ul><li class="current">Button Mobile</li><li><a href="combobox-mobile.html">Combobox Mobile</a></li><li><a href="icon-button-mobile.html">Icon Button Mobile</a></li><li><a href="list-mobile.html">List Mobile</a></li><li><a href="navigation-bar-mobile.html">Navigation Bar Mobile</a></li><li><a href="root-mobile.html">Root Mobile</a></li><li><a href="tab-bar-mobile.html">Tab Bar Mobile</a></li></ul></nav></head><div class="components"><div class="component"><h2>Button</h2><div class="details"></div><div class="component-demo"><button class="topcoat-button">Scan a QR code</button> <button class="topcoat-button" disabled>Button</button></div><pre class="html">&lt;button class=&quot;topcoat-button&quot;&gt;Scan a QR code&lt;/button&gt; &lt;button class=&quot;topcoat-button&quot; disabled&gt;Button&lt;/button&gt;</pre><pre class="css"><code>.topcoat-button,
+.topcoat-button--cta,
+.topcoat-button--quiet {
+  padding: .625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: #505050;
+  text-shadow: none;
+  vertical-align: top;
+  border-radius: 22.5px;
+}.topcoat-button,
+.topcoat-button--cta {
+  background-color: white;
+  box-shadow: 0 0 0 2px #505050 inset;
+  border: 0;
+}.topcoat-button:hover,
+.topcoat-button--cta:hover,
+.topcoat-button--quiet:hover {
+  background-color: hsl(113, 0%, 31%);
+  color: white;
+}.topcoat-button:active,
+.topcoat-button--cta:active {
+  background-color: hsl(113, 0%, 20%);
+  box-shadow: inset 0 2px hsla(0, 0%, 0%, .05);
+  color: white;
+}.topcoat-button:focus,
+.topcoat-button--cta:focus,
+.topcoat-button--quiet:focus {
+  background-color: hsl(113, 0%, 20%);
+  box-shadow: inset 0 2px hsla(0, 0%, 0%, .05);
+  color: white;
+  outline: 0;
+  color: white;
+}.topcoat-button:disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--cta:hover:disabled {
+  background: hsl(0, 0%, 91.8%);
+  color: hsl(0, 0%, 76.1%);
+  box-shadow: none;
+}</code></pre></div><div class="component"><h2>Call To Action Button</h2><div class="details"></div><div class="component-demo"><button class="topcoat-button--cta" >Connect</button> <button class="topcoat-button--cta" disabled>Connect</button></div><pre class="html">&lt;button class=&quot;topcoat-button--cta&quot; &gt;Connect&lt;/button&gt; &lt;button class=&quot;topcoat-button--cta&quot; disabled&gt;Connect&lt;/button&gt;</pre><pre class="css"><code>.topcoat-button--cta {
+  border: 0;
+  background-color: hsl(212, 79%, 49%);
+  box-shadow: none;
+  color: white;
+  font-weight: normal;
+  text-shadow: none;
+}.topcoat-button--cta:hover {
+  background-color: hsl(212, 95%, 44%);
+}.topcoat-button--cta:active {
+  background-color: hsl(211, 94%, 38%);
+  border: 0;
+}.topcoat-button--cta:disabled,
+.topcoat-button--cta:hover:disabled {
+  border: 0;
+}.topcoat-button--cta:focus {
+  background-color: hsl(211, 94%, 38%);
+  border: 0;
+  outline: 0;
+}</code></pre></div><div class="component"><h2>Quiet Button</h2><div class="details"></div><div class="component-demo"><button class="topcoat-button--quiet">Button</button> <button class="topcoat-button--quiet" disabled>Button</button></div><pre class="html">&lt;button class=&quot;topcoat-button--quiet&quot;&gt;Button&lt;/button&gt; &lt;button class=&quot;topcoat-button--quiet&quot; disabled&gt;Button&lt;/button&gt;</pre><pre class="css"><code>.topcoat-button--quiet {
+  border: 0;
+  box-shadow: none;
+}.topcoat-button--quiet:hover {
+  text-shadow: none;
+  box-shadow: none;
+  background-color: hsl(113, 0%, 96%);
+  color: #505050;
+}.topcoat-button--quiet:active,
+.topcoat-button--quiet:focus {
+  text-shadow: none;
+  background-color: #eaeaea;
+  box-shadow: none;
+  color: #505050;
+}</code></pre></div></div></body></html>

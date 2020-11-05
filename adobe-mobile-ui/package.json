@@ -1,0 +1,50 @@
+{
+  "name": "adobe-mobile-ui",
+  "version": "0.6.1",
+  "description": "UI Components for mobile applications like the PhoneGap Developer App",
+  "main": "index.js",
+  "scripts": {
+    "build:root:mobile": "rsn -n topcoat -o ./css/root-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,./variables/root.css] ./components/root.css",
+    "build:button:mobile": "rsn -n topcoat -o ./css/button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/button.css",
+    "build:combobox:mobile": "rsn -n topcoat -o ./css/combobox-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/combobox.css",
+    "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/tab-bar.css",
+    "build:navigation-bar:mobile": "rsn -n topcoat -o ./css/navigation-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/navigation-bar.css",
+    "build:list:mobile": "rsn -n topcoat -o ./css/list-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/list.css",
+    "build:icon-button:mobile": "rsn -n topcoat -o ./css/icon-button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/icon-button.css",
+    "build": "rm -rfv ./css/* && npm run build:root:mobile && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:navigation-bar:mobile && npm run build:list:mobile && npm run build:icon-button:mobile",
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc",
+    "prepublish": "npm run topdoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/adobe-mobile-ui.git"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/phonegap/adobe-mobile-ui/issues"
+  },
+  "topdoc": {
+    "source": "./css",
+    "assetDirectory": "./assets/",
+    "pugFile": "./template.pug"
+  },
+  "homepage": "https://github.com/phonegap/adobe-mobile-ui#readme",
+  "devDependencies": {
+    "resin": "^1.2.1",
+    "topcoat-button": "^0.7.0",
+    "topdoc": "^1.0.11"
+  },
+  "dependencies": {
+    "topcoat-button-bar-base": "^1.0.0",
+    "topcoat-fonts": "^0.3.0",
+    "topcoat-list": "^1.0.0",
+    "topcoat-navigation-bar": "^0.7.0",
+    "topcoat-root": "^1.0.0",
+    "topcoat-select-base": "^0.1.0",
+    "topcoat-tab-bar": "^1.1.0",
+    "topcoat-variables-dark": "^1.1.2",
+    "topcoat-variables-desktop": "^1.1.0",
+    "topcoat-variables-shared": "^1.1.0"
+  }
+}

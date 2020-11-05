@@ -1,0 +1,101 @@
+.app
+  &-list
+    list-style: none
+    display: -webkit-box
+    display: -webkit-flex
+    display: -ms-flexbox
+    display: flex
+    -webkit-flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin: 0
+    -webkit-box-pack: center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+    padding: 0 0 100px 0
+  &__thumbnail
+    flex-basis: 200px
+    min-height: 225px
+    text-align: center
+  &__title
+    margin-bottom: 2px
+  &__thumbnail__image
+    border-radius: 16px
+    box-shadow: 0px 2px 1px 1px rgba(0,0,0,0.3)
+.hidden
+  display: none
+.app-filters
+  background: #f2f2f2
+  box-sizing: border-box
+  padding: 2px 10px
+  margin-bottom: 40px
+  color: #111
+  label
+    font-size: .875rem
+    text-transform: uppercase
+    margin-left: 5px
+.app-filter
+  display: block
+.app-filter__input
+  margin-left: 20px
+.app-description
+  max-width: 700px
+  position: relative
+  margin: 0 auto
+  padding: 0
+.app-screenshots
+  display: block
+  text-align: center
+  img
+    margin: 0 15px 30px
+    width: 100%
+    max-width: 320px
+    height: auto
+    &:nth-child(2n-1)
+      margin-right: 15px
+.app-description__header
+  display: flex
+  align-content: flex-end
+  img
+    margin-right: 24px
+  & > div:last-child
+    align-self: flex-end
+.app-description__title
+  font-size: 1.875rem
+  margin: 0
+.app--page__nav
+  text-align: center
+  .button--pill
+    margin: 0 20px 0
+  margin-bottom: 60px
+.app-stores
+  margin-bottom: 30px
+  svg
+    height: 20px
+    vertical-align: text-top
+    margin-right: 5px
+  a
+    margin: 0 30px 30px 0
+    &:last-child
+      margin-right: 0
+  h4
+    margin-bottom: 15px
+@media (min-width: 480px)
+  .app-list
+    -webkit-box-pack: start
+    -webkit-justify-content: flex-start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    padding: 0 0 100px 0
+  .app-filter
+    display: inline-block
+@media (min-width: 710px)
+  .app-screenshots
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    img
+      margin: 0 0 30px
+      &:nth-child(2n-1)
+        margin-right: 30px

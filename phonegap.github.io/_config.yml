@@ -1,0 +1,55 @@
+production: true
+# Site settings
+title: PhoneGap
+description: "Easily create apps using the web technologies you know and love: HTML, CSS, and JavaScript."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://phonegap.com" # the base hostname & protocol for your site
+twitter_username: phonegap
+github_username:  phonegap
+
+gems:
+  - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+paginate: 10
+paginate_list_count: 7
+paginate_path: "/blog/page:num/"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Rakefile
+  - README.md
+  - vendor
+  - blog
+  - Guardfile
+
+post:
+  template: _post.txt
+  extension: md
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+
+permalink: /blog/:year/:month/:day/:title/
+highlighter: rouge
+excerpt_separator: <!--more-->
+sass:
+  sass_dir: _sass
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      extra_js:
+        - taglist.js

@@ -1,0 +1,102 @@
+/* topdoc
+  name: Combobox
+  description: A combobox
+  markup:
+    <div class="topcoat-combobox__container" style="margin:20px 20px 300px;">
+      <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
+      <div class="topcoat-combobox__suggestions-container">
+        <ul class="topcoat-list__container">
+          <li class="topcoat-list__item">Preact</li>
+          <li class="topcoat-list__item">React</li>
+        </ul>
+      </div>
+    </div>
+    <div class="topcoat-combobox__container--open" style="margin:20px 20px 300px;">
+      <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
+      <div class="topcoat-combobox__suggestions-container">
+        <ul class="topcoat-list__container">
+          <li class="topcoat-list__item">Preact</li>
+          <li class="topcoat-list__item">React</li>
+        </ul>
+      </div>
+    </div>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+.combobox__select {
+  border: 1px solid #eaeaea;
+  border-radius: 5.5px;
+  font-size: .777777778rem;
+  font-weight: normal;
+  height: 44px;
+  box-sizing: border-box;
+  padding: 0 44px 0 .666666667rem;
+  line-height: .777777778rem;
+  color: var(--color);
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+.combobox__container, .combobox__container--open {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.combobox__container:after, .combobox__container--open:after {
+  content: '';
+  width: 44px;
+  height: 44px;
+  border: 1px solid #eaeaea;
+  border-radius: 0 5.5px 5.5px 0;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' enable-background='new 0 0 10 6'><style type='text/css'>.st0{fill:#767676;}</style><path class='st0' d='M5 6c-.3 0-.5-.1-.7-.3l-4-4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l3.3 3.3 3.3-3.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4 4c-.2.2-.4.3-.7.3z'/></svg>") no-repeat center;
+  background-size: 10px 6px;
+  pointer-events: none;
+}
+.combobox__select::placeholder {
+  font-style: italic;
+  font-weight: 200;
+}
+.combobox__suggestions-container {
+  position: absolute;
+  background: var(--background-color);
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 5.5px;
+  top: 48px;
+  left: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: none;
+}
+.combobox__container--open .combobox__suggestions-container {
+  display: block;
+}
+.combobox__suggestions-container ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.combobox__suggestions-container li {
+  font-size: .777777778rem;
+  font-weight: normal;
+  box-sizing: border-box;
+  padding: .888888889rem .666666667rem;
+  height: 44px;
+  line-height: .777777778rem;
+  color: var(--color);
+  cursor: pointer;
+}

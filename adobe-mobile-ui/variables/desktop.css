@@ -1,0 +1,37 @@
+:root {
+  --base-font-size: 16px;
+  --button-font-size: .9375rem;
+  --font-weight: 600;
+  --color: hsl(0, 0%, 31%);
+  --color--hover: white;
+  --padding: .3125rem 1rem;
+  --text-shadow: none;
+  --border-radius: 16.5px;
+  --background-color: white;
+  --background-color--hover: hsl(0, 0%, 29%);
+  --background-color--disabled: hsl(0, 0%, 91.8%);
+  --background-color--focus: hsl(212, 95%, 44%);
+  --color--disabled: hsl(0, 0%, 76.1%);
+  --border-thickness : 2px;
+  --box-shadow: 0 0 0 var(--border-thickness) var(--color) inset;
+  --box-shadow--disabled: none;
+
+  --border: 0;
+  --border--disabled: var(--border-thickness) solid var(--background-color--disabled);
+  --border--focus: var(--border);
+  --box-shadow--focus: none;
+
+  --border--cta: 0;
+  --background-color--cta: hsl(212, 79%, 49%);
+  --box-shadow--cta: none;
+  --color--cta: white;
+  --font-weight--cta: var(--font-weight);
+  --text-shadow--cta: var(--text-shadow);
+
+  --background-color--cta--hover: hsl(212, 95%, 44%);
+  --background-color--cta--down: hsl(211, 94%, 38%);
+
+  --border-bottom--tab-bar: 1px solid;
+  --padding--tab-bar: .3125rem 0;
+  --margin--tab-bar: 0 .5rem;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "node-xcconfig",
+  "version": "0.0.1",
+  "description": "Xcode .xcconfig file reader and writer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/node-xcconfig.git"
+  },
+  "keywords": [
+    "xcconfig",
+    "xcode"
+  ],
+  "author": "Shazron Abdullah",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/phonegap/node-xcconfig/issues"
+  },
+  "homepage": "https://github.com/phonegap/node-xcconfig#readme"
+}

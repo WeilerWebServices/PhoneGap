@@ -1,0 +1,158 @@
+@import "topcoat-button-base";
+/* topdoc
+  name: Button
+  description: A simple button
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button">Scan a QR code</button>
+    <button class="topcoat-button" disabled>Button</button>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+%button--common {
+  @extend: %button;
+  padding: var(--padding);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  color: var(--color);
+  text-shadow: var(--text-shadow);
+  vertical-align: var(--vertical-align);
+  border-radius: var(--border-radius);
+}
+
+.button {
+  @extend: %button--common;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+}
+
+.button:hover {
+  background-color: hsl(113, 0%, 31%);
+  color: var(--color--hover);
+}
+
+.button:active {
+  background-color: var(--background-color--down);
+  box-shadow: var(--box-shadow--down);
+  color: var(--color--hover);
+}
+
+.button:focus {
+  background-color: var(--background-color--down);
+  box-shadow: var(--box-shadow--down);
+  color: var(--color--hover);
+  outline: 0;
+  color: var(--color--hover);
+}
+
+.button:disabled {
+  background: var(--background-color--disabled);
+  color: var(--color--disabled);
+  box-shadow: var(--box-shadow--disabled);
+}
+
+/* topdoc
+  name: Call To Action Button
+  description: A CALL TO ARMS, er, ACTION!
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--cta" >Connect</button>
+    <button class="topcoat-button--cta" disabled>Connect</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - call to action
+*/
+.button--cta {
+  @extend: .button;
+  border: var(--border--cta);
+  background-color: var(--background-color--cta);
+  box-shadow: var(--box-shadow--cta);
+  color: var(--color--cta);
+  font-weight: var(--font-weight--cta);
+  text-shadow: var(--text-shadow--cta);
+  @extend: .button:focus;
+}
+
+.button--cta:hover {
+  background-color: var(--background-color--cta--hover);
+}
+
+.button--cta:active {
+  background-color: var(--background-color--cta--down);
+  border: var(--border--cta);
+}
+.button--cta, .button--cta:hover {
+  @extend: .button:disabled;
+}
+.button--cta:disabled, .button--cta:hover:disabled {
+  border: var(--border--cta);
+}
+.button--cta:focus {
+  background-color: var(--background-color--cta--down);
+  border: var(--border--cta);
+  outline: 0;
+}
+
+/* topdoc
+  name: Quiet Button
+  description: A simple, yet quiet button
+  modifiers:
+    :active: Quiet button active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - quiet
+*/
+.button--quiet {
+  @extend: %button--common;
+  @extend: %button--quiet;
+  border: var(--border);
+  @extend: .button:hover;
+  @extend: .button:focus;
+  box-shadow: var(--box-shadow--quiet);
+}
+
+.button--quiet:disabled {
+  @extend: %button--disabled;
+}
+
+.button--quiet:hover {
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow--quiet);
+  background-color: var(--background-color--hover);
+  color: var(--color--hover--quiet);
+}
+
+.button--quiet:active, .button--quiet:focus {
+  text-shadow: var(--text-shadow);
+  background-color: var(--background-color--down--active);
+  box-shadow: var(--box-shadow--quiet);
+  color: var(--color--hover--quiet);
+}

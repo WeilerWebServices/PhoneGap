@@ -1,0 +1,17 @@
+---
+title: Blog
+layout: default
+---
+
+{% include subheader.html %}
+<div class="bounds--wide">
+  <div class="blog-post__preview-list">
+    <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
+      {% include post-preview.html %}
+    {% endfor %}
+  </div>
+  {% include blog-aside.html %}
+</div>
+{% include pagination.html %}
+{% include subfooter.html %}

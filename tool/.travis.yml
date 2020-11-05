@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- '4.2'
+before_script:
+- rvm install 2.2.3
+- bundle install
+script:
+- npm run lint
+- bundle exec rake test
+sudo: false
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  slack:
+    secure: gvWIDSx49ePsSMmqgGuGg9gni/S3vl77zkBD8laUcsY1ZYL3fwBKUA/P3ljCoj9Tc8yptbrzlf/XHsd8jt3FTfZqYaMYmp45v49t3Q//GF8Antxf/FrtolSRPOCSp8DxmLBlvnF1lksTspYlYgsTdY/oKEOsrroBPm8se6FFG3e4L2NmXoUwhNPq0c3b8PFdigIjftiYq3v5jvzcfmxDB/6IyDbt6O7ZvsQr2FfqbkKGKY39cWyssSPTiV7g6C8RCfgAydNKmntmU6/QPym+ujm8Dy+3cUd4Hi85EyIZb7vpWZGHaqtLepiyUx0zLjZfPcLRQtiP4wo+7NT78fnU0K75VjKxLO2l9aPMgX/yBrTjnnxTyN5FLqbVYGfN2tTSgxY/VB9IqTqfvlMCLRQLPduDakjZK2K8RZEpJb7PhXzf8qDhTity0tcaZ45okF7bP0KMulgSm653MjiPJo9Cp0V5XMbpcMRbcrITebqavWyX6M+p8s0MAcBFOMyAqO9fk9Dn5IIEgqhFleLE4NcqiQ21ULYVIV7WPQjHMVgFxRAIXyHntAR79NBMDni6gUJ0r4GOYCE2SvLFVgKMrdmt5SO0ajOiXiNY1bshTtqjfhEDEa0ODklC8bs0R/Onq4kGu07dOSLNJjFdLIcRJs5e5VG9IrpOfankVWXkAmjy5zQ=
+  email:
+  - PhoneGapCI@adobe.com

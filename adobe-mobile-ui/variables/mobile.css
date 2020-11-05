@@ -1,0 +1,44 @@
+:root {
+  --base-font-size: 18px;
+  --font-size: 1rem;
+  --button-font-size: 1rem;
+  --font-weight: normal;
+  --color: #505050;
+  --color--hover: white;
+  --color--hover--quiet: #505050;
+  --padding: .625rem 1.25rem;
+  --text-shadow: none;
+  --border-radius: 22.5px;
+  --background--body: white;
+  --background-color: white;
+  --background-color--hover: hsl(113, 0%, 96%);
+  --background-color--disabled: hsl(0, 0%, 91.8%);
+  --background-color--focus: hsl(212, 95%, 44%);
+  --background-color--down: hsl(113, 0%, 20%);
+  --background-color--down--active: #eaeaea;
+  --color--disabled: hsl(0, 0%, 76.1%);
+  --border-thickness : 2px;
+  --box-shadow: 0 0 0 var(--border-thickness) var(--color) inset;
+  --box-shadow--quiet: none;
+  --box-shadow--disabled: none;
+
+
+  --border: 0;
+  --border--disabled: var(--border-thickness) solid var(--background-color--disabled);
+  --border--focus: var(--border);
+  --box-shadow--focus: none;
+
+  --border--cta: 0;
+  --background-color--cta: hsl(212, 79%, 49%);
+  --box-shadow--cta: none;
+  --color--cta: white;
+  --font-weight--cta: var(--font-weight);
+  --text-shadow--cta: var(--text-shadow);
+
+  --background-color--cta--hover: hsl(212, 95%, 44%);
+  --background-color--cta--down: hsl(211, 94%, 38%);
+
+  --background-color--tab-bar--active: transparent;
+
+  --button-font-weight: 600;
+}

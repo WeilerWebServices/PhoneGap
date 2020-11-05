@@ -1,0 +1,17 @@
+:root {
+  /*--border-top--list-container: var();*/
+  --border-top--list-item: 1px solid hsl(217, 22%, 93%);
+  --border-bottom--list: var(--border-top--list-item);
+  --background-color--list-header: var(--background-color);
+  --background-color--list: var(--background-color);
+
+  --padding--list-header: var(--padding--list-item);
+  --font-size--list-header: var(--font-size);
+  --font-weight--list-header: 600;
+  --color--list-header: var(--color);
+  --text-shadow--list-header: none;
+  --border-top--list-header: var(--border-top--list-item);
+  --border-bottom--list-header: none;
+}
+
+@import "topcoat-list";

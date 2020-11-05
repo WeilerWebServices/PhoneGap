@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PhoneGap Emulation powered by Ripple</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function () {
+                app.initialize();
+                page.initialize();
+            });
+        </script>
+    </head>
+    <body>
+        <section id="header">
+            <div class="logo"></div>
+        </section>
+
+        <section id="loading"></section>
+
+        <article id="content" style="display:none;">
+            <section id="search" class="box">
+                <form id="page-request-form" onsubmit="return false;">
+                    <input id="page-request-address" type="url" placeholder="http://phonegap.com or http://localhost:3000" />
+                </form>
+            </section>
+
+            <section class="docs box light-box">
+                <h1>Getting Started</h1>
+                <h2>Emulate PhoneGap</h2>
+                <ul>
+                    <li><a href="#">http://phonegap.com</a></li>
+                    <li><a href="#">http://localhost:3000</a></li>
+                </ul>
+                <h2>Emulate a Specific Platform</h2>
+                <ul>
+                    <li><a href="#">http://phonegap.com?platform=cordova</a></li>
+                    <li><a href="#">http://phonegap.com?platform=phonegap</a></li>
+                </ul>
+                <h2>Emulate a Specific Platform Version</h2>
+                <ul>
+                    <li><a href="#">http://phonegap.com?platform=cordova-2.0.0</a></li>
+                    <li><a href="#">http://phonegap.com?platform=phonegap-1.0.0</a></li>
+                </ul>
+            </section>
+
+            <section class="docs box light-box">
+                <h1>About</h1>
+                <h2>PhoneGap Emulator</h2>
+                <ul>
+                    <li>
+                        The PhoneGap Emulator allows you to test your PhoneGap application
+                        from your desktop browser. PhoneGap's JavaScript APIs are
+                        avaialble using Ripple, so you can subscribe to
+                        <code>deviceready</code> and even stub responses for your custom plugins.
+                    </li>
+                </ul>
+                <h2>Requirements</h2>
+                <ul>
+                    <li>The PhoneGap Emulator requires two free, third-party tools.</li>
+                    <li>1. <a href="http://google.com/chrome">Google Chrome Browser</a> by <a href="http://google.com">Google</a>.</li>
+                    <li>2. <a href="https://chrome.google.com/webstore/detail/geelfhphabnejjhdalkjhgipohgpdnoc">Ripple Emulation Environment</a> by the <a href="https://developer.blackberry.com/html5/">BlackBerry HTML Team</a>.</li>
+                </ul>
+            </section>
+
+            <section id="api" class="docs box light-box">
+                <h1>API</h1>
+                <h2>Overview</h2>
+                <p>
+                    The PhoneGap emulator can be invoked with a web request.
+                    The request options are provided as query string parameters and
+                    the response will check for all dependencies before opening
+                    the Ripple emulator.
+                </p>
+                <h2>Request</h2>
+                <ul>
+                    <li>http://emulate.phonegap.com?url=&lt;url&gt;&amp;platform=&lt;platform&gt;</li>
+                </ul>
+                <h2>Parameters</h2>
+                <h3>URL</h3>
+                <ul>
+                    <li>The <code>url</code> is the address of your local or public web app.</li>
+                    <li>The <code>url</code> is a required parameter.</li>
+                    <li><h3>Examples:</h3></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=phonegap.com</a></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=http://phonegap.com</a></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=http://phonegap.com/images</a></li>
+                </ul>
+                <h3>Platform</h3>
+                <ul>
+                    <li>The <code>platform</code> is the environment to emulate.</li>
+                    <li>The <code>platform</code> is an optional parameter.</li>
+                    <li><h3>Emulates latest version:</h3></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=phonegap.com&platform=cordova</a></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=phonegap.com&platform=phonegap</a></li>
+                    <li><h3>Emulates specific version:</h3></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=phonegap.com&platform=cordova-2.0.0</a></li>
+                    <li><a href="#">http://emulate.phonegap.com?url=phonegap.com&platform=phonegap-1.0.0</a></li>
+                </ul>
+                <p></p>
+            </section>
+        </article>
+
+        <section id="browser-warning" class="warning box light-box" style="display:none;">
+            <a href="http://www.google.com/chrome" class="bt">Get Google Chrome</a>
+            <p>M'yeah, we're gonna need you to get Google Chrome to use our emulator extension. Thanks!</p>
+        </section>
+
+        <section id="ripple-warning" class="warning box light-box" style="display:none;">
+            <a href="https://chrome.google.com/webstore/detail/geelfhphabnejjhdalkjhgipohgpdnoc" class="bt">Get Ripple Emulator</a>
+            <p>OMG, you need the ripples! The Ripple Emulator can be installed as a Chrome extension.</p>
+        </section>
+
+        <a href="https://github.com/blackberry/Ripple-UI"><img style="position:absolute; top:0; right:0; border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+
+        <script type="text/javascript">
+           var _gaq = _gaq || [];
+           _gaq.push(['_setAccount', 'UA-94271-11']);
+           _gaq.push(['_setDomainName', 'phonegap.com']);
+           _gaq.push(['_trackPageview']);
+
+           (function() {
+             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+           })();
+        </script>
+    </body>
+</html>

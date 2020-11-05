@@ -1,0 +1,6 @@
+@import "topcoat-fonts";
+@import "topcoat-root";
+
+body {
+  color: var(--color);
+}

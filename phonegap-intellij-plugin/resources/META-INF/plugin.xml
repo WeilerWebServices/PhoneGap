@@ -1,0 +1,41 @@
+<idea-plugin>
+  <id>com.phonegap.tools.plugin</id>
+  <name>PhoneGap</name>
+  <version>1.3</version>
+  <vendor email="anis@adobe.com" url="http://www.phonegap.com">PhoneGap</vendor>
+
+  <description><![CDATA[
+      This plugin allows you to easily embed PhoneGap in your Android project.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Fix crash on Android Studio gt 2.3
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group id="PhoneGap.Menu" text="_PhoneGap" description="PhoneGap menu" popup="true" icon="PhoneGapIcons.PHONEGAP">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <action id="PhoneGap.Init" class="com.phonegap.tools.plugin.PhoneGapInit" text="Initialize _Project" description="Initialize a PhoneGap project" icon="PhoneGapIcons.PHONEGAP_ACTION"/>
+      <action id="PhoneGap.PluginstallFromNpm" class="com.phonegap.tools.plugin.PhoneGapPlugInstallFromNpm" text="Install _Plugin from npm" description="Install PhoneGap Plugin From npm" icon="PhoneGapIcons.PHONEGAP_ACTION"/>
+      <action id="PhoneGap.PluginstallFromDisk" class="com.phonegap.tools.plugin.PhoneGapPlugInstallFromDisk" text="Install _Plugin from filesystem" description="Install PhoneGap Plugin From Filesytem" icon="PhoneGapIcons.PHONEGAP_ACTION"/>
+    </group>
+  </actions>
+</idea-plugin>

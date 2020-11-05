@@ -1,0 +1,30 @@
+---
+layout: default
+title: PhoneGap Third Party Tools
+---
+{% include subheader.html %}
+<div class="bounds">
+  <!-- This loops through the paginated posts -->
+  {% for post in paginator.posts %}
+    <article class="tool">
+      <header>
+        <h2 class="tool__title">{{ post.title }}</h2>
+      </header>
+      <div class="tool__content">
+        <div class="tool__image">
+          <a href="{{ post.link }}">
+            <img src="{{ post.thumb }}" alt="{{ post.title }}"/>
+          </a>
+        </div>
+        <div class="tool__description">
+          {{ post.content }}
+        </div>
+      </div>
+      <footer class="tool__footer">
+        <a href="{{ post.link }}" class="tool__link button--pill--next--gray">Tool Website</a>
+      </footer>
+    </article>
+  {% endfor %}
+</div>
+{% include pagination.html %}
+{% include subfooter.html %}

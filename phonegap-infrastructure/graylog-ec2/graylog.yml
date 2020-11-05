@@ -1,0 +1,99 @@
+---
+# Sets up the basics for the Graylog instance.
+# Take a look at the individual tasks below to see what specific steps are executed on the instance.
+# The `vars` block a few lines down lists out all variables you can pass to this playbook.
+# You can provide them at runtime using the `--extra-vars "key=value"` flag.
+- name: Configure Graylog instance
+  tags: configure
+  hosts: metrics
+  vars:
+    metrics_disk: /dev/xvdb                                 # the disk device where we will store metrics
+    set_graylog_admin_password: ""                          # when set via the command line, overrides the graylog administrator password
+    graylog_pass: "{{ set_graylog_admin_password }}"        # defaults to the admin password we want to set (the variable previous). We will check this is non-empty as the first task, since if we are running against a live instance, we need to know the Graylog password!
+    hostname: phonegap-metrics                              # the hostname we should configure for the instance
+  remote_user: ubuntu
+  become: yes
+
+  tasks:
+  - name: Set Graylog REST API endpoint
+    # Set the Graylog REST API based on the hostname as defined in the `hosts` file in this directory.
+    set_fact:
+      graylog_rest_api: "http://{{ inventory_hostname }}:9000/api"
+  - name: Ensure password for Graylog was provided
+    fail: msg="Please provide an admin password for Graylog, either via the graylog_pass variable, or if you would like to set a new password to the Graylog instance, via the set_admin_graylog_password variable."
+    when: graylog_pass | trim == ''
+  - name: Set hostname
+    hostname:
+      name: "{{ hostname }}"
+    notify:
+      - restart rsyslog
+  - name: Ensure hostfile is correct
+    lineinfile:
+      dest: /etc/hosts
+      owner: root
+      group: root
+      mode: 0644
+      line: "127.0.0.1 {{ hostname }}"
+      state: present
+      create: yes
+    notify:
+      - restart rsyslog
+  - name: Ensure EBS volume has a filesystem
+    filesystem:
+      fstype: ext4
+      dev: "{{ metrics_disk }}"
+      force: no
+  - name: Mount EBS volume
+    mount:
+      name: /var/opt/graylog/data
+      src: "{{ metrics_disk }}"
+      fstype: ext4
+      state: mounted
+  - name: Ensure NTP service is running
+    service:
+      name: ntp
+      state: started
+  - name: Baseline graylog configuration (if graylog-settings.json does not exist)
+    shell: |
+      graylog-ctl set-timezone UTC \
+      && graylog-ctl set-external-ip "https://{{ inventory_hostname }}:443/api/" \
+      && graylog-ctl enforce-ssl
+    args:
+      creates: /etc/graylog/graylog-settings.json
+    notify:
+      - reconfigure graylog
+  - name: Set graylog admin password
+    shell: graylog-ctl set-admin-password "{{ set_graylog_admin_password }}" \
+    notify:
+      - reconfigure graylog
+    when: not(set_graylog_admin_password | trim == '')
+  - name: Query existing Graylog HTTP inputs
+    uri:
+      url: "{{ graylog_rest_api }}/system/inputs"
+      method: GET
+      user: "admin"
+      password: "{{ graylog_pass }}"
+      return_content: yes
+      force_basic_auth: yes
+    register: inputs
+  - name: Add new HTTP input for application metrics (if it does not exist)
+    uri:
+      url: "{{ graylog_rest_api }}/system/inputs"
+      method: POST
+      user: "admin"
+      password: "{{ graylog_pass }}"
+      body: '{"title":"PhoneGap Metrics Input","type":"org.graylog2.inputs.gelf.http.GELFHttpInput","configuration":{"bind_address":"127.0.0.1","port":12201,"recv_buffer_size":16384,"override_source":null,"decompress_size_limit":16384,"idle_writer_timeout":10,"max_chunk_size":16384,"tcp_keepalive":false,"enable_cors":true,"tls_client_auth":"disabled"},"global":true}'
+      force_basic_auth: yes
+      status_code: 201
+      body_format: json
+    when: inputs.json["total"] == 0
+
+  handlers:
+    - name: reconfigure graylog
+      command: graylog-ctl reconfigure
+
+    - name: restart rsyslog
+      service: name=rsyslog state=restarted
+
+    - name: restart elasticsearch
+      command: graylog-ctl restart elasticsearch

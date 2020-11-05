@@ -1,0 +1,43 @@
+title: Archived Blog
+description: All the old blog posts, written from 2008 to 2017
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://phonegap.com" # the base hostname & protocol for your site
+destination:  ./_site-test/blog/
+
+gems:
+  - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - package.json
+  - Rakefile
+  - README.md
+
+paginate: 10
+paginate_list_count: 7
+paginate_path: "/page:num/"
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+
+post:
+  template: _post.txt
+  extension: md
+
+markdown: kramdown
+
+kramdown:
+  input: GFM

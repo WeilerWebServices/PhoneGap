@@ -1,0 +1,145 @@
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__item,
+.topcoat-navigation-bar__title {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-navigation-bar {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__item {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-navigation-bar,
+.topcoat-navigation-bar__title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-navigation-bar {
+  word-spacing: 0;
+}
+
+.topcoat-navigation-bar__item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-navigation-bar__title {
+  text-overflow: ellipsis;
+}
+
+/* topdoc
+  name: Navigation Bar
+  description: A place where navigation goes to drink
+  markup:
+    <div class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item center full">
+            <h1 class="topcoat-navigation-bar__title">Header</h1>
+        </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - navigation
+    - bar
+*/
+
+.topcoat-navigation-bar {
+  height: 1.688rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: white;
+  color: hsla(0, 100%, 100%, 1);
+  box-shadow: inset 0 -1px hsla(180, 1%, 20%, 1), 0 2px hsla(180, 1%, 27%, 1);
+  text-align: center;
+}
+
+.topcoat-navigation-bar__item {
+  margin: 0;
+  line-height: 1.688rem;
+  vertical-align: top;
+}
+
+.topcoat-navigation-bar__title {
+  font-size: 1.16rem;
+  font-weight: 600;
+  color: hsla(0, 100%, 100%, 1);
+}
+
+/* topdoc
+  name: Navigation Bar
+  description: A place where navigation goes to drink
+  markup: |
+    <div class="topcoat-navigation-bar">
+      <div class="topcoat-left topcoat-navigation-bar__item">
+        <button class="topcoat-icon-button">
+          <span class="topcoat-icon"></span>
+        </button>
+      </div>
+      <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">Header</h1>
+      </div>
+      <div class="topcoat-right topcoat-navigation-bar__item">
+        <button class="topcoat-icon-button">
+          <span class="topcoat-icon"></span>
+        </button>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - navigation
+    - bar
+*/
+
+.topcoat-navigation-bar {
+  padding: 10px 44px 0;
+  box-sizing: border-box;
+  height: 48px;
+  box-shadow: 0 1px hsl(217, 22%, 93%);
+  position: relative;
+}
+
+.topcoat-navigation-bar__title {
+  font-size: 1.111111111rem;
+  font-weight: normal;
+  color: #505050;
+}
+
+.topcoat-navigation-bar__item.topcoat-left,
+.topcoat-navigation-bar__item.topcoat-right {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 100%;
+}
+
+.topcoat-navigation-bar__item.topcoat-left {
+  left: 0;
+}
+
+.topcoat-navigation-bar__item.topcoat-right {
+  right: 0;
+}
+
+.topcoat-navigation-bar .topcoat-icon-button {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+Copyright 2016 Jesse MacFadyen, Adobe Systems Incorporated
+
+This software is licensed under the Apache License, Version 2.0 (see
+LICENSE file).
+
+This software uses the following third party libraries that may have
+licenses differing from that of the software itself. You can find the
+libraries and their respective licenses below.
+
+
+@overview es6-promise - a tiny implementation of Promises/A+.
+@copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
+@license   Licensed under MIT license
+            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
+@version   4.0.5
+
+
+PhoneGap is a registered trademark or trademark of Adobe Systems Incorporated.

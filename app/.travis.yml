@@ -1,0 +1,11 @@
+language: ruby
+rvm:
+- 2.2.3
+script: bundle exec rake test
+sudo: false
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  slack:
+    secure: I9s8EUh0KTrrXiiq1d0BvDeU+RRQhMt2yVnsys1Tc9W3v495hAh2HxzPCa3F78jVCK3eTs2nscTe68w9nPar446Gh8Th9/MM6D7DAQsn5Z4bhMS3iiN+O242nKJ2BULEh5RKxbCLwSSySR/NxWBfNHYaXAMIAhCETC/Twzm+SzLturODSz3pGhg9/ERWcpC+4yrfuE9rwPM1cat6506Oir+FHErd5rlkDkfq8jT6BpR4lqIBVgox09uMX2CP7TSZOEVWRahmSrHL/K4fZTfAapAmHiWDG9KNDQp0mK9nZcG/ABVSWwvkygQURu6QlkHeLhK9ex41yTJ5WzDowS3SLVzIAHozthc6gYIgl4CQnwukUwODOGcUAU9PSjWiAiuBhGBUf+Ol61qjj5uep/alWqnXEA3fZBOPc1nwCQOK3OH9oh615tBQn5XYNVs5QRwxWx/AkUr7xFaFRZl8+gp7zpI5ijXTL/5GfQ627BHsol4Ty0OGajB5XCE/69pVh6m3Jq92GCpeQ9BeNA2pHAtxGjCxLetRA4EXiQ+CJfX5RSXtzLbRQFocfAoLwzalzhch22CWZU67sWr9P9x5NW/qroP8vmxo3RVu+hlyYcxhkCrDZ5UYwnTGdejbZlRt+rjolvdwLXaAOKQqafDt4RcbhDMpa60NsUb8xCCdBWd9Tmc=

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="phonegap-plugin-es6promise"
+    version="0.0.1">
+    <name>ES6 Promise</name>
+    <description>ES6 Promise Polyfil for use in PhoneGap/Cordova apps</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,phonegap,es6promise</keywords>
+    <repo>https://github.com/purplecabbage/phonegap-plugin-es6promise</repo>
+    <issue>https://github.com/purplecabbage/phonegap-plugin-es6promise/issues</issue>
+
+    <js-module src="www/es6promise.js" name="es6promise">
+        <clobbers target="Promise" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+    </platform>
+
+</plugin>

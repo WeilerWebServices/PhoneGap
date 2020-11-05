@@ -1,0 +1,95 @@
+:root {
+  /*--border-top--list-container: var();*/
+}
+
+.topcoat-list {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-list__container {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.topcoat-list {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-list {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.topcoat-list__header {
+  margin: 0;
+}
+
+.topcoat-list__item {
+  margin: 0;
+  padding: 0;
+}
+
+/* topdoc
+  name: List
+  description: Topcoat default list skin
+  markup:
+    <div class="topcoat-list">
+      <h3 class="topcoat-list__header">Category</h3>
+      <ul class="topcoat-list__container">
+        <li class="topcoat-list__item">
+          Item
+        </li>
+        <li class="topcoat-list__item">
+          Item
+        </li>
+        <li class="topcoat-list__item">
+          Item
+        </li>
+      </ul>
+    </div>
+  tags:
+    - mobile
+    - list
+*/
+
+.topcoat-list {
+  border-top: 0;
+  border-bottom: 1px solid hsl(217, 22%, 93%);
+  background-color: white;
+}
+
+.topcoat-list__header {
+  padding: 1.16rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: white;
+  color: #505050;
+  text-shadow: none;
+  border-top: 1px solid hsl(217, 22%, 93%);
+  border-bottom: none;
+}
+
+.topcoat-list__container {
+  border-top: 0;
+  color: #505050;
+}
+
+.topcoat-list__item {
+  padding: 1.16rem;
+  border-top: 1px solid hsl(217, 22%, 93%);
+  border-bottom: 0;
+}
+
+.topcoat-list__item:first-child {
+  border-top: 2px solid hsla(0, 0%, 0%, .05);
+}

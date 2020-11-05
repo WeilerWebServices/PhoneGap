@@ -1,0 +1,86 @@
+#power {
+    background:#ee3551;
+    padding:80px 0 80px 0;
+}
+
+/**** Setting container padding to resize with viewport ****/
+
+ 
+@media screen and (max-width: 48em) {
+#power {
+        padding: 40px 0 30px 0;
+    }
+}
+
+/* Padding resetting for container done */
+
+#power h2 {
+    font-size:1.9rem;
+    padding-left: 30px;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 0px #97041A;
+}
+
+/**** Setting h2 font to resize with viewport ****/
+
+@media screen and (max-width: 62em) {
+#power h2 {
+        font-size:1.7rem;
+        margin: 0;
+    }
+}
+ 
+@media screen and (max-width: 57em) {
+#power h2 {
+        font-size:1.55rem;
+    }
+}
+ 
+ 
+@media screen and (max-width: 48em) {
+#power h2 {
+        font-size:1.5rem;
+        text-align: center;
+        padding-left: 0px;
+    }
+}
+
+/* Font resetting for h2 done */
+
+#power p {
+    padding:0 0 0 30px;
+    vertical-align: text-top;
+}
+
+/**** Setting p font to resize with viewport ****/
+
+@media screen and (max-width: 62em) {
+#power p {
+        font-size: 1.0rem;
+    }
+}
+ 
+@media screen and (max-width: 48em) {
+#power p {
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* Font resetting for p done */
+
+#power img {
+  max-height: 220px;
+}
+
+/**** Setting install image to scale with small ****/
+
+@media screen and (max-width: 57em) {
+#power img {
+        max-height: 180px;
+        padding: 20px 0 30px 0;
+    }
+}
+
+/* Image reset done */

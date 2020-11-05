@@ -1,0 +1,200 @@
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-tab-bar__item > input {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: .001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  text-overflow: ellipsis;
+}
+
+.topcoat-tab-bar__button:disabled {
+  opacity: .3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.topcoat-tab-bar {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.topcoat-tab-bar__item {
+  width: auto;
+  border-radius: 0;
+  position: relative;
+}
+
+.topcoat-tab-bar__item > input {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  text-decoration: none;
+}
+
+/* topdoc
+  name: Tab Bar
+  description: Component of tab buttons
+  modifiers:
+    :disabled: Disabled state
+  markup:
+    <div class="topcoat-tab-bar">
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar" checked="true">
+        <button class="topcoat-tab-bar__button">One</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar">
+        <button class="topcoat-tab-bar__button">Two</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar">
+        <button class="topcoat-tab-bar__button">Three</button>
+      </label>
+    </div>
+    <br>
+    <div class="topcoat-tab-bar">
+      <label class="topcoat-tab-bar__item">
+        <button class="topcoat-tab-bar__button">One</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <button class="topcoat-tab-bar__button--selected">Two</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <button class="topcoat-tab-bar__button">Three</button>
+      </label>
+    </div>
+  examples:
+    mobile tab bar: http://codepen.io/Topcoat/pen/rJICF
+  tags:
+    - desktop
+    - light
+    - dark
+    - mobile
+    - tab
+    - group
+    - bar
+*/
+
+.topcoat-tab-bar__item > input {
+  z-index: 2;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  padding: .625rem 1.25rem;
+  min-height: 1.313rem;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: #505050;
+  text-shadow: none;
+  vertical-align: top;
+  background-color: white;
+  box-shadow: 0 0 0 2px #505050 inset;
+  border-top: 0;
+}
+
+.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--selected,
+:checked + .topcoat-tab-bar__button,
+:active + .topcoat-tab-bar__button {
+  color: hsl(212, 79%, 49%);
+  background-color: transparent;
+  box-shadow: inset 0 0 2px;
+}
+
+.topcoat-tab-bar__button:focus,
+:focus + .topcoat-tab-bar__button {
+  z-index: 1;
+  box-shadow: none, none;
+  outline: 0;
+}
+
+.topcoat-tab-bar {
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: inset 0 -1px hsl(217, 22%, 93%);
+}
+
+.topcoat-tab-bar__item {
+  font-size: .722222222rem;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  background: transparent;
+  box-shadow: none;
+  padding: .625rem 0;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+
+.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--selected,
+:checked + .topcoat-tab-bar__button,
+:active + .topcoat-tab-bar__button {
+  border-bottom: 2px solid;
+  box-shadow: none;
+  width: 100%;
+}
+
+.topcoat-tab-bar__button:focus,
+:focus + .topcoat-tab-bar__button {
+  box-shadow: none;
+}

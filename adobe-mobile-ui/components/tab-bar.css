@@ -1,0 +1,36 @@
+@import "topcoat-tab-bar";
+
+.tab-bar {
+  display: flex;
+  box-shadow: inset 0 -1px hsl(217, 22%, 93%);
+}
+
+.tab-bar__item {
+  font-size: .722222222rem;
+  flex-grow: 1;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+.tab-bar__button,
+.tab-bar__button--selected {
+  background: transparent;
+  box-shadow: none;
+  padding: .625rem 0;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+
+.tab-bar__button:active,
+.tab-bar__button--selected,
+:checked + .tab-bar__button,
+:active + .tab-bar__button {
+  border-bottom: 2px solid;
+  box-shadow: none;
+  width: 100%;
+}
+
+.tab-bar__button:focus,
+:focus + .tab-bar__button {
+  box-shadow: none;
+}

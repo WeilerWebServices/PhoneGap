@@ -1,0 +1,19 @@
+title: Books & Videos
+description: Learn about your favorite open source mobile app framework
+baseurl: "/book" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+gems:
+  - jekyll-coffeescript
+  - jekyll-sitemap
+
+exclude: [vendor, Gemfile, Gemfile.lock, LICENSE, Rakefile, README.md]
+
+post:
+  template: _post.txt
+  extension: md
+
+markdown: kramdown
+
+kramdown:
+  input: GFM

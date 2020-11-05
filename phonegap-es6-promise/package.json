@@ -1,0 +1,25 @@
+{
+  "name": "phonegap-plugin-es6promise",
+  "version": "0.0.1",
+  "description": "PhoneGap ES6 Promise Polyfil Plugin",
+  "cordova": {
+    "id": "phonegap-plugin-es6promise",
+    "platforms": [
+      "ios","android","windows"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/purplecabbage/phonegap-plugin-es6promise"
+  },
+  "keywords": [
+    "cordova",
+    "es6promise",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-windows"
+  ],
+  "author": "Jesse MacFadyen",
+  "license": "Apache-2.0"
+}

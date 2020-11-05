@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"><head><title>Navigation Bar Mobile</title><link rel="stylesheet" type="text/css" href="css/root-mobile.css"><link rel="stylesheet" type="text/css" href="css/navigation-bar-mobile.css"></head><body><head><h1>Navigation Bar Mobile</h1><nav><ul><li><a href="index.html">Button Mobile</a></li><li><a href="combobox-mobile.html">Combobox Mobile</a></li><li><a href="icon-button-mobile.html">Icon Button Mobile</a></li><li><a href="list-mobile.html">List Mobile</a></li><li class="current">Navigation Bar Mobile</li><li><a href="root-mobile.html">Root Mobile</a></li><li><a href="tab-bar-mobile.html">Tab Bar Mobile</a></li></ul></nav></head><div class="components"><div class="component"><h2>Navigation Bar</h2><div class="details"></div><div class="component-demo"><div class="topcoat-navigation-bar"> <div class="topcoat-navigation-bar__item center full"> <h1 class="topcoat-navigation-bar__title">Header</h1> </div> </div></div><pre class="html">&lt;div class=&quot;topcoat-navigation-bar&quot;&gt; &lt;div class=&quot;topcoat-navigation-bar__item center full&quot;&gt; &lt;h1 class=&quot;topcoat-navigation-bar__title&quot;&gt;Header&lt;/h1&gt; &lt;/div&gt; &lt;/div&gt;</pre><pre class="css"><code>.topcoat-navigation-bar {
+  height: 1.688rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: white;
+  color: hsla(0, 100%, 100%, 1);
+  box-shadow: inset 0 -1px hsla(180, 1%, 20%, 1), 0 2px hsla(180, 1%, 27%, 1);
+  text-align: center;
+}.topcoat-navigation-bar__item {
+  margin: 0;
+  line-height: 1.688rem;
+  vertical-align: top;
+}.topcoat-navigation-bar__title {
+  font-size: 1.16rem;
+  font-weight: 600;
+  color: hsla(0, 100%, 100%, 1);
+}</code></pre></div><div class="component"><h2>Navigation Bar</h2><div class="details"></div><div class="component-demo"><div class="topcoat-navigation-bar">
+  <div class="topcoat-left topcoat-navigation-bar__item">
+    <button class="topcoat-icon-button">
+      <span class="topcoat-icon"></span>
+    </button>
+  </div>
+  <div class="topcoat-navigation-bar__item center full">
+    <h1 class="topcoat-navigation-bar__title">Header</h1>
+  </div>
+  <div class="topcoat-right topcoat-navigation-bar__item">
+    <button class="topcoat-icon-button">
+      <span class="topcoat-icon"></span>
+    </button>
+  </div>
+</div>
+</div><pre class="html">&lt;div class=&quot;topcoat-navigation-bar&quot;&gt;
+  &lt;div class=&quot;topcoat-left topcoat-navigation-bar__item&quot;&gt;
+    &lt;button class=&quot;topcoat-icon-button&quot;&gt;
+      &lt;span class=&quot;topcoat-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;topcoat-navigation-bar__item center full&quot;&gt;
+    &lt;h1 class=&quot;topcoat-navigation-bar__title&quot;&gt;Header&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;topcoat-right topcoat-navigation-bar__item&quot;&gt;
+    &lt;button class=&quot;topcoat-icon-button&quot;&gt;
+      &lt;span class=&quot;topcoat-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre><pre class="css"><code>.topcoat-navigation-bar {
+  padding: 10px 44px 0;
+  box-sizing: border-box;
+  height: 48px;
+  box-shadow: 0 1px hsl(217, 22%, 93%);
+  position: relative;
+}.topcoat-navigation-bar__title {
+  font-size: 1.111111111rem;
+  font-weight: normal;
+  color: #505050;
+}.topcoat-navigation-bar__item.topcoat-left,
+.topcoat-navigation-bar__item.topcoat-right {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 100%;
+}.topcoat-navigation-bar__item.topcoat-left {
+  left: 0;
+}.topcoat-navigation-bar__item.topcoat-right {
+  right: 0;
+}.topcoat-navigation-bar .topcoat-icon-button {
+  width: 100%;
+  height: 100%;
+}</code></pre></div></div></body></html>

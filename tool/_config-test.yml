@@ -1,0 +1,26 @@
+title: Tools
+description: Third party tools for working with PhoneGap
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://phonegap.com" # the base hostname & protocol for your site
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Rakefile
+  - README.md
+  - package.json
+
+paginate: 10
+paginate_list_count: 7
+paginate_path: "/page:num/"
+
+
+post:
+  template: _post.txt
+  extension: md

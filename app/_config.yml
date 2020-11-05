@@ -1,0 +1,31 @@
+title: App Showcase
+description: Ever wondered who is building amazing apps using PhoneGap?
+baseurl: "/app" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+gems:
+  - jekyll-paginate
+  - jekyll-coffeescript
+  - jekyll-sitemap
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Rakefile
+  - README.md
+  - post.txt
+
+paginate: 10
+paginate_list_count: 7
+paginate_path: "/blog/page:num/"
+
+post:
+  template: _post.txt
+  extension: md
+
+markdown: kramdown
+
+kramdown:
+  input: GFM

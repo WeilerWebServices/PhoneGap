@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><title>Tab Bar Mobile</title><link rel="stylesheet" type="text/css" href="css/root-mobile.css"><link rel="stylesheet" type="text/css" href="css/tab-bar-mobile.css"></head><body><head><h1>Tab Bar Mobile</h1><nav><ul><li><a href="index.html">Button Mobile</a></li><li><a href="combobox-mobile.html">Combobox Mobile</a></li><li><a href="icon-button-mobile.html">Icon Button Mobile</a></li><li><a href="list-mobile.html">List Mobile</a></li><li><a href="navigation-bar-mobile.html">Navigation Bar Mobile</a></li><li><a href="root-mobile.html">Root Mobile</a></li><li class="current">Tab Bar Mobile</li></ul></nav></head><div class="components"><div class="component"><h2>Tab Bar</h2><div class="details"></div><div class="component-demo"><div class="topcoat-tab-bar"> <label class="topcoat-tab-bar__item"> <input type="radio" name="tab-bar" checked="true"> <button class="topcoat-tab-bar__button">One</button> </label> <label class="topcoat-tab-bar__item"> <input type="radio" name="tab-bar"> <button class="topcoat-tab-bar__button">Two</button> </label> <label class="topcoat-tab-bar__item"> <input type="radio" name="tab-bar"> <button class="topcoat-tab-bar__button">Three</button> </label> </div> <br> <div class="topcoat-tab-bar"> <label class="topcoat-tab-bar__item"> <button class="topcoat-tab-bar__button">One</button> </label> <label class="topcoat-tab-bar__item"> <button class="topcoat-tab-bar__button--selected">Two</button> </label> <label class="topcoat-tab-bar__item"> <button class="topcoat-tab-bar__button">Three</button> </label> </div></div><pre class="html">&lt;div class=&quot;topcoat-tab-bar&quot;&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot; checked=&quot;true&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;One&lt;/button&gt; &lt;/label&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Two&lt;/button&gt; &lt;/label&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;input type=&quot;radio&quot; name=&quot;tab-bar&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Three&lt;/button&gt; &lt;/label&gt; &lt;/div&gt; &lt;br&gt; &lt;div class=&quot;topcoat-tab-bar&quot;&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;One&lt;/button&gt; &lt;/label&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button--selected&quot;&gt;Two&lt;/button&gt; &lt;/label&gt; &lt;label class=&quot;topcoat-tab-bar__item&quot;&gt; &lt;button class=&quot;topcoat-tab-bar__button&quot;&gt;Three&lt;/button&gt; &lt;/label&gt; &lt;/div&gt;</pre><pre class="css"><code>.topcoat-tab-bar__item &gt; input {
+  z-index: 2;
+}.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  padding: .625rem 1.25rem;
+  min-height: 1.313rem;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: #505050;
+  text-shadow: none;
+  vertical-align: top;
+  background-color: white;
+  box-shadow: 0 0 0 2px #505050 inset;
+  border-top: 0;
+}.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--selected,
+:checked + .topcoat-tab-bar__button,
+:active + .topcoat-tab-bar__button {
+  color: hsl(212, 79%, 49%);
+  background-color: transparent;
+  box-shadow: inset 0 0 2px;
+}.topcoat-tab-bar__button:focus,
+:focus + .topcoat-tab-bar__button {
+  z-index: 1;
+  box-shadow: none, none;
+  outline: 0;
+}.topcoat-tab-bar {
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: inset 0 -1px hsl(217, 22%, 93%);
+}.topcoat-tab-bar__item {
+  font-size: .722222222rem;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+  color: #a0a0a0;
+}.topcoat-tab-bar__button,
+.topcoat-tab-bar__button--selected {
+  background: transparent;
+  box-shadow: none;
+  padding: .625rem 0;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--selected,
+:checked + .topcoat-tab-bar__button,
+:active + .topcoat-tab-bar__button {
+  border-bottom: 2px solid;
+  box-shadow: none;
+  width: 100%;
+}.topcoat-tab-bar__button:focus,
+:focus + .topcoat-tab-bar__button {
+  box-shadow: none;
+}</code></pre></div></div></body></html>

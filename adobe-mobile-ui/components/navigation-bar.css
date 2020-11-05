@@ -1,0 +1,60 @@
+@import "topcoat-navigation-bar";
+
+/* topdoc
+  name: Navigation Bar
+  description: A place where navigation goes to drink
+  markup: |
+    <div class="topcoat-navigation-bar">
+      <div class="topcoat-left topcoat-navigation-bar__item">
+        <button class="topcoat-icon-button">
+          <span class="topcoat-icon"></span>
+        </button>
+      </div>
+      <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">Header</h1>
+      </div>
+      <div class="topcoat-right topcoat-navigation-bar__item">
+        <button class="topcoat-icon-button">
+          <span class="topcoat-icon"></span>
+        </button>
+      </div>
+    </div>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - navigation
+    - bar
+*/
+
+.navigation-bar {
+  padding: 10px 44px 0;
+  box-sizing: border-box;
+  height: 48px;
+  box-shadow: 0 1px hsl(217, 22%, 93%);
+  position: relative;
+}
+.navigation-bar__title {
+  font-size: 1.111111111rem;
+  font-weight: normal;
+  color: var(--color);
+}
+
+.navigation-bar__item.left, .navigation-bar__item.right {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 100%;
+}
+.navigation-bar__item.left {
+  left: 0;
+}
+
+.navigation-bar__item.right {
+  right: 0;
+}
+
+.navigation-bar .icon-button {
+  width: 100%;
+  height: 100%;
+}

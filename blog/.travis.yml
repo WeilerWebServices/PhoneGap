@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- '4.2'
+before_script:
+- rvm install 2.2.3
+- bundle install
+script:
+- npm run lint
+- bundle exec rake test
+sudo: false
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  slack:
+    secure: A9btWjc1mxBGkiqCo9AqMMa4EfLCKnUeLtcZbQ5KK6jOU8qzv74d/iXovt4QSwXFcgtw973CsEcK+6oQPzjF+MUR4baydPl97y+bU7wiB6DESGv7DUjtgxCSJo7o78VlKwoPU8ie8opmCJZf+c9pP0a32KbS05ull9tJlDihomx/K0NgPur3a/j/nsFAvzIYg9RH4kEnmmzF5CYf3SbLwt3Fmygnf9uhQgKw2YcITLlsvmqsobX6TDv5yTB95ZdoYAtlilu6jfPZQX2rU+NRP75El/jRFTmlzIqqCm3Zq92x/j0NtMEOOcJ2Wg2Ty5wxLQD5AEiEwCQbh0BPRcDw6O7w/zKVeGUM20qJ1H/fp8NHi6sVLzaytRzmi9K2w5H8VmaNPOL6zC192ysjsKqhTM3k4XBnAUN6M/CjVXJ3yvLAkS+YI6kW41ZFHQQ/2ePK/ZPRB4K5aMHn4l5BJqHwjE2Ff9h2fbOO70r8LqLikauSLtPqWu2uf9QWd9a3yamP8d/xPXvZqrvNpqZMI96xXM+9TeuNgjxCsR2dmrOQ1cKNlrQO3xyPnS8WPtmDCiFjbGJEIvhqJKdSf6khMKIeFgIozr27yT4zUrszOXz1uT2dimqIH7aPaTPPCuqYIaUv3g9BQhLmotRAFj2u7EZG3FoHBesb6egOCsnyTpVhMmU=

@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '8'
+before_script:
+- npm run build-prod
+- mv node_modules/.bin/which node_modules/.bin/which.backup
+- rvm install 2.2.3
+- bundle install
+- mv node_modules/.bin/which.backup node_modules/.bin/which
+script:
+- npm run lint
+- bundle exec rake test
+sudo: false
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+notifications:
+  slack:
+    secure: eCGQRSAKSVlEIZtAB1CBFGd71NutYdiCQfrTL2PcAbQjx7f5G+eyr3K9yQp3mxUSFIzCVZzlWeQet58kmKIF2+9CoQoqxfyq3cSDoC9IvueRDjPGcsbo80KGY5NYZlP0hJ3U/BqApux2H8iv79V3zyQDEjcuGniToAtZ+ue7rHQ=

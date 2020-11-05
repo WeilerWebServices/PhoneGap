@@ -1,0 +1,15 @@
+{"id":"com.phonegap.app",
+  "name":"pgapp",
+  "lib": {
+    "android": {
+      "uri": "http://people.apache.org/~steven/cordova-android.tar.gz",
+      "version": "dev",
+      "id": "cordova-android-dev"
+    },
+    "ios": {
+      "uri": "http://people.apache.org/~steven/cordova-android.tar.gz",
+      "version": "dev",
+      "id": "cordova-ios-dev"
+    }
+  }
+}

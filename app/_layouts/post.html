@@ -1,0 +1,64 @@
+---
+layout: default
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aja/0.4.1/aja.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    aja()
+      .url('https://itunes.apple.com/lookup?id={{ page.itunes_id }}')
+      .type('jsonp')
+      .on('success', function(data){
+          console.log(data.results);
+          var screenshotUrls = data.results[0].screenshotUrls;
+          var screenshotsDiv = document.getElementById('screenshots');
+          screenshotUrls.forEach(function(screenshotUrl){
+            var image = document.createElement("img");
+            var div = document.createElement("div");
+            div.appendChild(image);
+            image.src = screenshotUrl;
+            screenshotsDiv.appendChild(div);
+          });
+      })
+      .go();
+  });
+</script>
+{% include subheader.html %}
+<div class="bounds">
+  <article class="app-description">
+    <header class="app-description__header">
+      <div>
+        <img class="app__thumbnail__image" src="{{ page.thumb | prepend: site.baseurl }}" width="100" alt="{{ page.title }}"/>
+      </div>
+      <div>
+        <h2 class="app-description__title">{{ page.title }}</h2>
+        <div>by <a href="{{ page.developer_link }}">{{ page.developer }}</a> | Added {{ page.date | date: "%-d %b %Y" }}</div>
+      </div>
+    </header>
+    {{ content }}
+    <div id="screenshots" class="app-screenshots"></div>
+    <div class="app-stores">
+      <h4>Download this app from:</h4>
+      {% for device in page.devices %}
+        {% if device == 'ios' %}
+          <a href="{{ page.ios_link }}" class="button--cta">{% include images/apple.svg %} The App Store</a>
+        {% endif %}
+        {% if device == 'android' %}
+          <a href="{{ page.android_link }}" class="button--cta">{% include images/android.svg %} Google Play</a>
+        {% endif %}
+        {% if device == 'windows_phone' %}
+          <a href="{{ page.windows_phone_link }}" class="button--cta">{% include images/windows.svg %} The Windows Store</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+  <footer class="app--page__nav">
+    {% if page.next.url %}
+      <a class="button--pill--prev--gray" href="{{ page.next.url| prepend: site.baseurl }}">{{page.next.title}}</a>
+    {% endif %}
+      <a class="button--pill--gray" href="{{ site.baseurl }}">App Showcase</a>
+    {% if page.previous.url %}
+      <a class="button--pill--next--gray" href="{{ page.previous.url| prepend: site.baseurl }}">{{page.previous.title}}</a>
+    {% endif %}
+  </footer>
+</div>
+{% include subfooter.html %}
